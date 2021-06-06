@@ -1,10 +1,10 @@
 # Amazon_Vine_Analysis
 by Bob Ciminera
 
-Overview
+### Overview
 
 
-### 1. Perform ETL on Amazon Product Reviews
+#### 1. Perform ETL on Amazon Product Reviews
 
 US Digital Music surveys.  
 
