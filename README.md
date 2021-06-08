@@ -52,23 +52,23 @@ Pandas code was written in Jupyter Notebook to transform the vine_table.csv file
 
 A DataFrame was created for the vine_table data:
 
-<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_vine_table.png" width = "500" >
+<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/vine_csv_load.png" width = "500" >
 
 The data is filtered to create a DataFrame or table where there are 20 or more total votes:
 
-<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_vine_table.png" width = "500" >
+<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/20plus_votes.png" width = "500" >
 
 The data was filtered to create a DataFrame where the percentage of helpful_votes is equal to or greater than 50%:
 
-<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_vine_table.png" width = "500" >
+<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/helpful_50pct.png" width = "500" >
 
 The data was filtered to create a DataFrame where there is a Vine review and another dataframe where there was not a Vine review:
  
-<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_vine_table.png" width = "500" >
+<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/vine_reviews.png" width = "500" >
 
 The total number of votes, the number of 5 star reviews, and the percentage of 5 star reviews were then calculated:
 
-<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_vine_table.png" width = "500" >
+<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/results_df.png" width = "500" >
 
 
 
@@ -76,8 +76,8 @@ The total number of votes, the number of 5 star reviews, and the percentage of 5
 
 In summary, for US Amazon Book reviews, paid Vine review members give a lower percentage of favorable reviews than the non members.  
 
-1. There were a total of xx Vine reviews and yy non-Vine reviews.
-2. xx Vine reviews were 5 stars and yy ? non-Vine reviews were 5 stars.
-3. xx% of Vine reviews were 5 stars whereas yy%  of non-Vine reviews were 5 stars.
+1. There were a total of 5.012 Vine reviews and 109,297 non-Vine reviews.
+2. 2,031 Vine reviews were 5 stars and 49,967 non-Vine reviews were 5 stars.
+3. 40.5% of Vine reviews were 5 stars whereas 45.7%  of non-Vine reviews were 5 stars.
 
 Therefore, in US Book reviews, Vine members do Not show a favorable review bias despite the fact that they are members of the Vine program.  
