@@ -3,8 +3,27 @@ by Bob Ciminera
 
 ### Overview
 
+The purpose of this project is to analyzing Amazon reviews written by members of the paid Amazon Vine program to determine whether there is any bias toward favorable reviews from Vine members. 
 
-#### 1. Perform ETL on Amazon Product Reviews
+The Amazon Vine program is a service that allows manufacturers and publishers to receive reviews for their products. 
+
+Companies pay a small fee to Amazon and provide products to Amazon Vine members, who are then required to publish a review.
+
+There are 50 review datasets, each of which contains reviews of a specific product, from clothing apparel to wireless products. 
+
+For this analysis US Digital Music Purchases was chosen for the analysis.  Pyspark was used to perform the ETL process to extract the dataset, transform the data, connect to an AWS RDS instance, and load the transformed data into pgAdmin. 
+
+From there, Pandas was used to test for bias in the reviews for Vine versus non Vine members.
+
+
+#### Results
+
+Results: Using bulleted lists and images of DataFrames as support, address the following questions:
+
+
+
+
+1. Perform ETL on Amazon Product Reviews
 
 US Digital Music surveys.  
 
@@ -30,5 +49,15 @@ ETL using the following code
     [githublogo](review)
     [githublogo](vine)
 
+2. Determine Bias of Vine Reviews
+
+To determine if there is any bias towards reviews that were written as part of the Vine program Pandas was used to test whether having a paid Vine review makes a difference in the percentage of 5-star reviews.
 
 
+
+
+### Summary
+
+1. How many Vine reviews and non-Vine reviews were there?
+2. How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?
+3. What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
