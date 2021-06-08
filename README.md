@@ -29,17 +29,17 @@ Pandas was used to test for bias in the reviews for Vine versus non Vine members
 
 - The extracted dataset was then transformed into four DataFrames for customer, product, review, and vine data:
 
-   <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_customers_df.png" width = "500" >
-    <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_products_df.png" width = "500" >
-    <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_review_id_df.png" width = "500" >
-     <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_vine_df.png" width = "500" >
+   <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_customers_df.png" width = "600" >
+    <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_products_df.png" width = "600" >
+    <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_review_id_df.png" width = "600" >
+     <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_vine_df.png" width = "600" >
 
 - Each DataFrames was then loaded into an AWS RDS database and then extracted into PostGre tables: 
 
-     <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_customers_table.png" width = "500" >
-    <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_products_table.png" width = "500" >
-    <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_review_id_table.png" width = "500" >
-     <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_vine_table.png" width = "500" >
+     <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_customers_table.png" width = "600" >
+    <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_products_table.png" width = "600" >
+    <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_review_id_table.png" width = "600" >
+     <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_vine_table.png" width = "600" >
 
 
 
@@ -52,29 +52,29 @@ Pandas code was written in Jupyter Notebook to transform the vine_table.csv file
 
 A DataFrame was created for the vine_table data:
 
-<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/vine_csv_load.png" width = "500" >
+<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/vine_csv_load.png" width = "600" >
 
 The data is filtered to create a DataFrame or table where there are 20 or more total votes:
 
-<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/20plus_votes.png" width = "500" >
+<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/20plus_votes.png" width = "600" >
 
 The data was filtered to create a DataFrame where the percentage of helpful_votes is equal to or greater than 50%:
 
-<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/helpful_50pct.png" width = "500" >
+<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/helpful_50pct.png" width = "600" >
 
 The data was filtered to create a DataFrame where there is a Vine review and another dataframe where there was not a Vine review:
  
-<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/vine_reviews.png" width = "500" >
+<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/vine_reviews.png" width = "600" >
 
 The total number of votes, the number of 5 star reviews, and the percentage of 5 star reviews were then calculated:
 
-<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/results_df.png" width = "500" >
+<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/results_df.png" width = "600" >
 
 
 
 ### Summary
 
-In summary, for US Amazon Book reviews, paid Vine review members give a lower percentage of favorable reviews than the non members.  
+In summary, for US Amazon Book reviews, paid Vine review members gave a lower percentage (40.5%) of favorable reviews than the non members (45.7%).
 
 1. There were a total of 5.012 Vine reviews and 109,297 non-Vine reviews.
 2. 2,031 Vine reviews were 5 stars and 49,967 non-Vine reviews were 5 stars.
