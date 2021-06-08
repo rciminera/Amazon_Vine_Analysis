@@ -3,7 +3,7 @@ by Bob Ciminera
 
 ### Overview
 
-The purpose of this project is to analyzing Amazon reviews written by members of the paid Amazon Vine program to determine whether there is any bias toward favorable reviews from Vine members. 
+The purpose of this project is to analyze Amazon reviews written by members of the paid Amazon Vine program to determine whether these members are biased to give favorable reviews. 
 
 The Amazon Vine program is a service that allows manufacturers and publishers to receive reviews for their products. 
 
@@ -11,53 +11,73 @@ Companies pay a small fee to Amazon and provide products to Amazon Vine members,
 
 There are 50 review datasets, each of which contains reviews of a specific product, from clothing apparel to wireless products. 
 
-For this analysis US Digital Music Purchases was chosen for the analysis.  Pyspark was used to perform the ETL process to extract the dataset, transform the data, connect to an AWS RDS instance, and load the transformed data into pgAdmin. 
+For this analysis US Book reviews were chosen using the following link "https://s3.amazonaws.com/amazon-reviews-pds/tsv/amazon_reviews_us_Books_v1_00.tsv.gz.
 
-From there, Pandas was used to test for bias in the reviews for Vine versus non Vine members.
+Pyspark was used to perform the ETL process to extract the dataset, transform the data, connect to an AWS RDS instance, and load the transformed data into pgAdmin.
 
-
-#### Results
-
-Results: Using bulleted lists and images of DataFrames as support, address the following questions:
+A CSV file of the Vine member and non member reviews was created from PostGre and 
+Pandas was used to test for bias in the reviews for Vine versus non Vine members.
 
 
+### Results
+
+1. Perform ETL on Amazon US Book Reviews  
+
+- ETL to extract, transform, and load the review data was created using the following Pyspark code in Google Colab:  [Amazon_Reviews_ETL.ipynb](https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Amazon_Reviews_ETL.ipynb)
+
+- Four DataFrames were created from the dataset extracted from AWS:
+
+- The extracted dataset was then transformed into four DataFrames for customer, product, review, and vine data:
+
+   <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_customers_df.png" width = "500" >
+    <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_products_df.png" width = "500" >
+    <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_review_id_df.png" width = "500" >
+     <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_vine_df.png" width = "500" >
+
+- Each DataFrames was then loaded into an AWS RDS database and then extracted into PostGre tables: 
+
+     <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_customers_table.png" width = "500" >
+    <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_products_table.png" width = "500" >
+    <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_review_id_table.png" width = "500" >
+     <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_vine_table.png" width = "500" >
 
 
-1. Perform ETL on Amazon Product Reviews
-
-US Digital Music surveys.  
-
-ETL using the following code
-[Amazon_Reviews_ETL.ipynb](notebook code)
-
-- An Amazon Review dataset is extracted as a DataFrame. Using PySpark on Google Colab, the US Digital Music review dataset was extracted from AWS and converted into a dataframe using the following code.                               
-
-    [githublogo](Extract code snippet here)
-
-- The extracted dataset was then transformed into four DataFrames, as follows:
-
-    [githublogo](customer)
-    [githublogo](product)
-    [githublogo](review)
-    [githublogo](vine)
-
-- ALL DataFrames are loaded into their respective tables in pgAdmin using the following code.
-
-    [githublogo](customer)
-    [githublogo](customer)
-    [githublogo](product)
-    [githublogo](review)
-    [githublogo](vine)
 
 2. Determine Bias of Vine Reviews
 
 To determine if there is any bias towards reviews that were written as part of the Vine program Pandas was used to test whether having a paid Vine review makes a difference in the percentage of 5-star reviews.
 
+Pandas code was written in Jupyter Notebook to transform the vine_table.csv file to analyse wheter Vine reviews were more favorable as a % of total reviews. The linke to the Pandas code is [Vine_Review_Analysis.ipynb](https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Vine_Review_Analysis.ipynb)
+
+
+A DataFrame was created for the vine_table data:
+
+<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_vine_table.png" width = "500" >
+
+The data is filtered to create a DataFrame or table where there are 20 or more total votes:
+
+<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_vine_table.png" width = "500" >
+
+The data was filtered to create a DataFrame where the percentage of helpful_votes is equal to or greater than 50%:
+
+<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_vine_table.png" width = "500" >
+
+The data was filtered to create a DataFrame where there is a Vine review and another dataframe where there was not a Vine review:
+ 
+<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_vine_table.png" width = "500" >
+
+The total number of votes, the number of 5 star reviews, and the percentage of 5 star reviews were then calculated:
+
+<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_vine_table.png" width = "500" >
 
 
 
 ### Summary
 
-1. How many Vine reviews and non-Vine reviews were there?
-2. How many Vine reviews were 5 stars? How many non-Vine reviews were 5 stars?
-3. What percentage of Vine reviews were 5 stars? What percentage of non-Vine reviews were 5 stars?
+In summary, for US Amazon Book reviews, paid Vine review members give a lower percentage of favorable reviews than the non members.  
+
+1. There were a total of xx Vine reviews and yy non-Vine reviews.
+2. xx Vine reviews were 5 stars and yy ? non-Vine reviews were 5 stars.
+3. xx% of Vine reviews were 5 stars whereas yy%  of non-Vine reviews were 5 stars.
+
+Therefore, in US Book reviews, Vine members do Not show a favorable review bias despite the fact that they are members of the Vine program.  
