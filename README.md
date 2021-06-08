@@ -34,11 +34,18 @@ Pandas was used to test for bias in the reviews for Vine versus non Vine members
     <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_review_id_df.png" width = "600" >
      <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_vine_df.png" width = "600" >
 
-- Each DataFrames was then loaded into an AWS RDS database and then extracted into PostGre tables: 
+- Each DataFrame was then loaded into an AWS RDS database and then extracted into PostGre tables: 
 
+     Customer_Table:
      <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_customers_table.png" width = "600" >
+
+     Products_Table:
     <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_products_table.png" width = "600" >
+
+    Review_Id_Table:
     <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_review_id_table.png" width = "600" >
+
+    Vine_Table:
      <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/Books_vine_table.png" width = "600" >
 
 
@@ -68,7 +75,7 @@ The data was filtered to create a DataFrame where there is a Vine review and ano
 
 The total number of votes, the number of 5 star reviews, and the percentage of 5 star reviews were then calculated:
 
-<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/results_df.png" width = "600" >
+<img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/results_df.png" width = "500" >
 
 
 
