@@ -63,7 +63,7 @@ A DataFrame was created for the vine_table data:
 
 <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/vine_csv_load.png" width = "600" >
 
-The data is filtered to create a DataFrame or table where there are 20 or more total votes:
+The data was filtered to create a DataFrame or table where there are 20 or more total votes:
 
 <img src="https://github.com/rciminera/Amazon_Vine_Analysis/blob/main/Screen%20Shots/20plus_votes.png" width = "600" >
 
